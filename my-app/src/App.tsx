@@ -32,7 +32,7 @@ export default function DictApp() {
     <div>
       <h2>{data[0]?.word || "Loading"}</h2>
       <form>
-        <label htmlFor=""></label>
+        <label htmlFor='wordsearch'></label>
       </form>
     </div>
   );
