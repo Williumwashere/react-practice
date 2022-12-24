@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 
-
 export default function Form() {
   const [comments, setComments] = useState<string[]>([]);
   const [blog, setBlog] = useState<string>("");
