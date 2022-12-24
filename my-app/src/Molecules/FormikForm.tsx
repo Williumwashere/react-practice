@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik, FormikConfig } from "formik";
 import React from "react";
-import { schema } from "./schema";
-import { BlogObj } from "./Types";
+import { schema } from "../schema";
+import { BlogObj } from "../Types";
 
 export default function FormikForm() {
   const handleSubmit: FormikConfig<BlogObj>["onSubmit"] = (values, actions) => {
