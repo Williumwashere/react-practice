@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "src/index.tsx"  ]
+, "src/index.tsx", "Unused Examples/App.tsx", "Unused Examples/Form.tsx"  ]
 }
