@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FormikForm from './Molecules/FormikForm';
+import FormikForm from './Organisms/FormikForm';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
