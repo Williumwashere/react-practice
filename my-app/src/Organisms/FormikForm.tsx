@@ -5,14 +5,16 @@ import { BlogObj } from "../Templates/Types";
 import FormikField from "../Molecules/FormikField";
 
 interface FormikFormProps {
-  onSubmit: (values: BlogObj) => void;
+  onSubmit?: (values: BlogObj) => void;
 }
 
 export default function FormikForm({ onSubmit }: FormikFormProps) {
   const handleSubmit: FormikConfig<BlogObj>["onSubmit"] = (values, actions) => {
     console.log(values);
-    onSubmit(values);
+    onSubmit?.(values);
     actions.resetForm();
+    const sendOut = JSON.stringify(values);
+    fetch("https://crimson-grass-ea1c.william-j-michaelis.workers.dev", { method: "POST", body: sendOut });
   };
 
   return (
