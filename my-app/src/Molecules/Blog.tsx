@@ -1,12 +1,12 @@
 import React from "react";
 
-interface FormikBlogProps {
+interface BlogProps {
     name: string;
     blog: string;
-    age: any;
+    age: string | number;
   }
 
-export default function FormikBlog({name,blog,age}:FormikBlogProps) {
+export default function Blog({name,blog,age}:BlogProps) {
   return (
     <div>
         <h3>User:{name}</h3>

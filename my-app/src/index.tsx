@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FormikForm from './Organisms/FormikForm';
+import TestPage from './Pages/TestPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <FormikForm />
+    <TestPage />
   </React.StrictMode>
 );

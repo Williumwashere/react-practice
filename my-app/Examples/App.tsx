@@ -1,8 +1,8 @@
 import React from "react";
 
 interface WordAppObj {
-  word:string;
-  definition:string;
+  word: string;
+  definition: string;
 }
 
 export default function DictApp() {
@@ -32,7 +32,7 @@ export default function DictApp() {
     <div>
       <h2>{data[0]?.word || "Loading"}</h2>
       <form>
-        <label htmlFor='wordsearch'></label>
+        <label htmlFor="wordsearch"></label>
       </form>
     </div>
   );

@@ -4,9 +4,14 @@ import { schema } from "../Templates/schema";
 import { BlogObj } from "../Templates/Types";
 import FormikField from "../Molecules/FormikField";
 
-export default function FormikForm() {
+interface FormikFormProps {
+  onSubmit: (values: BlogObj) => void;
+}
+
+export default function FormikForm({ onSubmit }: FormikFormProps) {
   const handleSubmit: FormikConfig<BlogObj>["onSubmit"] = (values, actions) => {
     console.log(values);
+    onSubmit(values);
     actions.resetForm();
   };
 
