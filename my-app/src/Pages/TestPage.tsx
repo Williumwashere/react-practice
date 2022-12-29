@@ -6,22 +6,22 @@ import { BlogObj } from "../Templates/Types";
 export default function TestPage() {
   const [comments, setComments] = useState<BlogObj[]>([]);
 
-  useEffect(() => {
+  const update = () => {
     fetch("https://crimson-grass-ea1c.william-j-michaelis.workers.dev", {
       method: "GET",
     })
       .then((response) => response.json())
       .then((comments) => setComments(comments));
-  },[]);
+  };
+
+  useEffect(() => {
+    update();
+  }, []);
 
   return (
     <>
       <div>
-        <FormikForm
-          onSubmit={(values) => {
-            setComments([values, ...comments]);
-          }}
-        />
+        <FormikForm onSubmit={update} />
       </div>
       <div>
         <BlogList comments={comments} />
